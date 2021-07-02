@@ -248,7 +248,6 @@ const PdfViewer = defineComponent({
 });
 export default PdfViewer;
 export type PdfViewerRefs = InstanceType<typeof PdfViewer>;
-export type PdfViewerProps = ExtractPublicPropTypes<typeof pdfViewerProps>;
 </script>
 <style scoped>
 .pdf-viewer-wrap {

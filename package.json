@@ -1,6 +1,6 @@
 {
-  "name": "vue-pdf-vite",
-  "version": "0.0.1",
+  "name": "@lanseria/vue-pdf-vite",
+  "version": "1.0.0",
   "files": [
     "dist"
   ],
@@ -15,7 +15,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "release:package": "npm run build && npm publish"
   },
   "dependencies": {
     "@vicons/ionicons5": "^0.10.0",
