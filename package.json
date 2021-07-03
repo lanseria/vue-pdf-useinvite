@@ -1,8 +1,10 @@
 {
   "name": "@lanseria/vue-pdf-vite",
-  "version": "1.0.1",
+  "description": "This project is for the vitejs vuejs3 pdfjs-dist pdf-lib library, built together with the components",
+  "version": "1.0.2",
   "files": [
-    "dist"
+    "dist",
+    "dist/*.css"
   ],
   "main": "./dist/vue-pdf-vite.umd.js",
   "module": "./dist/vue-pdf-vite.es.js",
@@ -10,8 +12,18 @@
     ".": {
       "import": "./dist/vue-pdf-vite.es.js",
       "require": "./dist/vue-pdf-vite.umd.js"
-    }
+    },
+    "./style.css": "./dist/style.css"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Lanseria/vue-pdf-useinvite.git"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "homepage": "https://github.com/Lanseria/vue-pdf-useinvite#readme",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",

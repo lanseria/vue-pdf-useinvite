@@ -1,27 +1,42 @@
-# Vue 3 + Typescript + Vite
+# vue-pdf-useinvite
 
-This template should help get you started developing with Vue 3 and Typescript in Vite.
+此项目为 vitejs vuejs3 pdfjs-dist pdf-lib 库, 一起构建的组件
 
-## Recommended IDE Setup
+This project is for the vitejs vuejs3 pdfjs-dist pdf-lib library, built together with the components
 
-[VSCode](https://code.visualstudio.com/) + [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur). Make sure to enable `vetur.experimental.templateInterpolationService` in settings!
+## npm / yarn 安装
 
-### If Using `<script setup>`
+```bash
+npm i @lanseria/vue-pdf-vite
 
-[`<script setup>`](https://github.com/vuejs/rfcs/pull/227) is a feature that is currently in RFC stage. To get proper IDE support for the syntax, use [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) instead of Vetur (and disable Vetur).
+yarn add @lanseria/vue-pdf-vite
+```
 
-## Type Support For `.vue` Imports in TS
+## 引入 @lanseria/vue-pdf-vite
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can use the following:
+```js
+import "@lanseria/vue-pdf-vite/style.css";
+```
 
-### If Using Volar
+```vue
+<template>
+  <pdf-editor
+    src="http://183.131.134.242:1889/files/20210619/383518b085f9469eb9ec34594196f8c7.pdf"
+  ></pdf-editor>
+</template>
 
-Run `Volar: Switch TS Plugin on/off` from VSCode command palette.
+<script lang="ts">
+import { defineComponent } from "vue";
+import { PdfEditor } from "@lanseria/vue-pdf-vite";
+// import { PdfViewer } from "@lanseria/vue-pdf-vite";
 
-### If Using Vetur
+export default defineComponent({
+  name: "App",
+  components: {
+    PdfEditor,
+  },
+});
+</script>
+```
 
-1. Install and add `@vuedx/typescript-plugin-vue` to the [plugins section](https://www.typescriptlang.org/tsconfig#plugins) in `tsconfig.json`
-2. Delete `src/shims-vue.d.ts` as it is no longer needed to provide module info to Typescript
-3. Open `src/main.ts` in VSCode
-4. Open the VSCode command palette
-5. Search and run "Select TypeScript version" -> "Use workspace version"
+## 具体 TODO
