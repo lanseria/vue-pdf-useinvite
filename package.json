@@ -1,15 +1,15 @@
 {
   "name": "@lanseria/vue-pdf-vite",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "files": [
     "dist"
   ],
-  "main": "./dist/my-lib.umd.js",
-  "module": "./dist/my-lib.es.js",
+  "main": "./dist/vue-pdf-vite.umd.js",
+  "module": "./dist/vue-pdf-vite.es.js",
   "exports": {
     ".": {
-      "import": "./dist/my-lib.es.js",
-      "require": "./dist/my-lib.umd.js"
+      "import": "./dist/vue-pdf-vite.es.js",
+      "require": "./dist/vue-pdf-vite.umd.js"
     }
   },
   "scripts": {
