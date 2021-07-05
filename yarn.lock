@@ -228,17 +228,17 @@
   integrity sha512-6O45kZAmkLvzGLToBxEz4lR2W6kXohCtebV2UxjH9GXjd8X9AhEn68FN9eNanFtWNzvgw1hqd6HkPRVQalqf7Q==
 
 "@vueuse/core@^5.0.3":
-  version "5.0.3"
-  resolved "https://registry.npmjs.org/@vueuse/core/-/core-5.0.3.tgz#8f3170e2a51ae62fb1725c84d4cc02a7552aad0b"
-  integrity sha512-TMCL11EVMaj2Y5qdYosvuwA+i1aKrerFXs7fhNZiQiLCWxF8XsrNdxzoiaI2n12UcmSOXvd1xdyWs7Nss+p/Hg==
+  version "5.1.0"
+  resolved "https://registry.nlark.com/@vueuse/core/download/@vueuse/core-5.1.0.tgz#c797191afc2a69860e93b8845485d10b3bfd4b9b"
+  integrity sha1-x5cZGvwqaYYOk7iEVIXRCzv9S5s=
   dependencies:
-    "@vueuse/shared" "5.0.3"
+    "@vueuse/shared" "5.1.0"
     vue-demi "*"
 
-"@vueuse/shared@5.0.3":
-  version "5.0.3"
-  resolved "https://registry.npmjs.org/@vueuse/shared/-/shared-5.0.3.tgz#31613951d5036459650ad8d47a9185e8950ea3c9"
-  integrity sha512-aY93WPygr8H/4RB8YuOmAD83Y+faq7zwW10Kd9i0kD9zf5ysVP+32j09rF/mZVtGCa0CSM8ambPZMsEhCkRbwQ==
+"@vueuse/shared@5.1.0":
+  version "5.1.0"
+  resolved "https://registry.nlark.com/@vueuse/shared/download/@vueuse/shared-5.1.0.tgz#0b199f26fb2c93375646baa9c787a2ad90c322ec"
+  integrity sha1-CxmfJvsskzdWRrqpx4eirZDDIuw=
   dependencies:
     vue-demi "*"
 
@@ -936,9 +936,9 @@ vooks@^0.2.4, vooks@^0.2.6:
     evtd "^0.2.2"
 
 vue-demi@*:
-  version "0.9.1"
-  resolved "https://registry.npmjs.org/vue-demi/-/vue-demi-0.9.1.tgz#25d6e1ebd4d4010757ff3571e2bf6a1d7bf3de82"
-  integrity sha512-7s1lufRD2l369eFWPjgLvhqCRk0XzGWJsQc7K4q+0mZtixyGIvsK1Cg88P4NcaRIEiBuuN4q1NN4SZKFKwQswA==
+  version "0.10.0"
+  resolved "https://registry.nlark.com/vue-demi/download/vue-demi-0.10.0.tgz?cache=0&sync_timestamp=1625456204437&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fvue-demi%2Fdownload%2Fvue-demi-0.10.0.tgz#e21cad49e4aee210093de658684f0ba49ae404f1"
+  integrity sha1-4hytSeSu4hAJPeZYaE8LpJrkBPE=
 
 vue-tsc@^0.0.24:
   version "0.0.24"

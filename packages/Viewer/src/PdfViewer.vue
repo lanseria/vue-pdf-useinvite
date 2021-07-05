@@ -283,8 +283,8 @@ export type PdfViewerRefs = InstanceType<typeof PdfViewer>;
 }
 .page-wrap {
   position: absolute;
-  bottom: 20px;
-  left: calc(50% - 20px);
+  bottom: 5%;
+  left: calc(50% - 65px);
   background: #f9f9f9;
   padding: 2px 5px;
   border-radius: 4px;
