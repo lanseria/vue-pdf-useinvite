@@ -19,9 +19,6 @@
     "type": "git",
     "url": "https://github.com/Lanseria/vue-pdf-useinvite.git"
   },
-  "workspaces": [
-    "packages/*"
-  ],
   "homepage": "https://github.com/Lanseria/vue-pdf-useinvite#readme",
   "license": "MIT",
   "scripts": {
