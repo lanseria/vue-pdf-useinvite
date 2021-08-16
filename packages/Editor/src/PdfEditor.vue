@@ -82,7 +82,7 @@ export default defineComponent({
       viewportWidth: 0,
       viewportHeight: 0,
       editState: null as EditState,
-      pdfBufferArray: {} as TypedArray,
+      pdfBufferArray: {} as any,
       ViewerRef: {} as PdfViewerRefs,
       PaintRef: {} as PaintRefs,
       TextRef: {} as TextRefs,

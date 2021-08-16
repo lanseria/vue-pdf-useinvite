@@ -1,4 +1,4 @@
-import { createApp, nextTick } from "vue";
+import { createApp } from "vue";
 import vuePdfVite from "../packages";
 import App from "./App.vue";
 

@@ -94,7 +94,7 @@ import {
 } from "pdfjs-dist/types/display/api";
 import { getBufferArray } from "../../utils";
 pdfjsLib.GlobalWorkerOptions.workerSrc =
-  "https://unpkg.zhimg.com/pdfjs-dist@2.8.335/build/pdf.worker.min.js";
+  "https://unpkg.zhimg.com/pdfjs-dist@2.9.359/build/pdf.worker.min.js";
 const pdfViewerProps = {
   src: {
     type: String,

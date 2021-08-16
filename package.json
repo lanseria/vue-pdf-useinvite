@@ -1,7 +1,7 @@
 {
   "name": "@lanseria/vue-pdf-vite",
   "description": "This project is for the vitejs vuejs3 pdfjs-dist pdf-lib library, built together with the components",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "files": [
     "dist",
     "dist/*.css"
