@@ -1,7 +1,7 @@
 <template>
   <div>
     <pdf-editor
-      src="http://183.131.134.242:1889/files/20210619/383518b085f9469eb9ec34594196f8c7.pdf"
+      src="https://bitcoinbook.info/wp-content/translations/cmn/book.pdf"
     ></pdf-editor>
   </div>
 </template>

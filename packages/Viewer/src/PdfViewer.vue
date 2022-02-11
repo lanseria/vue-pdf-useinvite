@@ -43,25 +43,28 @@
     <div v-if="edit && isEdit" class="tool-bar">
       <slot name="edit-bar"></slot>
     </div>
-    <div class="content-wrap">
-      <div class="render-content" ref="RenderContentRef">
-        <slot name="canvas"></slot>
-        <canvas ref="CanvasRef"></canvas>
+    <n-spin :show="loading">
+      <template #description>加载PDF中</template>
+      <div class="content-wrap">
+        <div class="render-content" ref="RenderContentRef">
+          <slot name="canvas"></slot>
+          <canvas ref="CanvasRef"></canvas>
+        </div>
+        <div v-if="enabledPage" class="page-wrap">
+          <n-button type="text" @click="handlePrev()" :disabled="prevDisabled">
+            <template #icon>
+              <n-icon><caret-back-icon /></n-icon>
+            </template>
+          </n-button>
+          <span>{{ current }} / {{ total }}</span>
+          <n-button type="text" @click="handleNext()" :disabled="nextDisabled">
+            <template #icon>
+              <n-icon><caret-forward-icon /></n-icon>
+            </template>
+          </n-button>
+        </div>
       </div>
-      <div v-if="enabledPage" class="page-wrap">
-        <n-button type="text" @click="handlePrev()" :disabled="prevDisabled">
-          <template #icon>
-            <n-icon><caret-back-icon /></n-icon>
-          </template>
-        </n-button>
-        <span>{{ current }} / {{ total }}</span>
-        <n-button type="text" @click="handleNext()" :disabled="nextDisabled">
-          <template #icon>
-            <n-icon><caret-forward-icon /></n-icon>
-          </template>
-        </n-button>
-      </div>
-    </div>
+    </n-spin>
   </div>
 </template>
 <script lang="ts">
@@ -71,6 +74,7 @@ import {
   NDescriptions,
   NDescriptionsItem,
   NIcon,
+  NSpin,
 } from "naive-ui";
 import {
   CaretBack as CaretBackIcon,
@@ -94,7 +98,7 @@ import {
 } from "pdfjs-dist/types/display/api";
 import { getBufferArray } from "../../utils";
 pdfjsLib.GlobalWorkerOptions.workerSrc =
-  "https://unpkg.zhimg.com/pdfjs-dist@2.9.359/build/pdf.worker.min.js";
+  "//unpkg.com/pdfjs-dist@2.8.335/build/pdf.worker.min.js";
 const pdfViewerProps = {
   src: {
     type: String,
@@ -123,6 +127,7 @@ const PdfViewer = defineComponent({
     NDescriptions,
     NDescriptionsItem,
     NIcon,
+    NSpin,
     CaretBackIcon,
     CaretForwardIcon,
     InformationIcon,
@@ -132,7 +137,7 @@ const PdfViewer = defineComponent({
     const state = reactive({
       CanvasRef: {} as HTMLCanvasElement,
       RenderContentRef: {} as HTMLElement,
-      loading: false,
+      loading: true,
       isEdit: false,
       current: 1,
       total: 0,
@@ -200,8 +205,6 @@ const PdfViewer = defineComponent({
       });
     };
     const getPdfPage = async (crt: number) => {
-      console.log(crt);
-      state.loading = true;
       if (!state.pdfDoc) {
         return;
       }
