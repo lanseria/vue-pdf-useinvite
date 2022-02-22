@@ -39,4 +39,9 @@ export default defineComponent({
 </script>
 ```
 
+## 效果
+
+<img src="./doc/pdf-view.png"/>
+<img src="./doc/pdf-edit.png"/>
+
 ## 具体 TODO
