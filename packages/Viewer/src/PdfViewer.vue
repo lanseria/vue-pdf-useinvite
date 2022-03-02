@@ -97,8 +97,9 @@ import {
   TypedArray,
 } from "pdfjs-dist/types/display/api";
 import { getBufferArray } from "../../utils";
-pdfjsLib.GlobalWorkerOptions.workerSrc =
-  "//unpkg.com/pdfjs-dist@2.8.335/build/pdf.worker.min.js";
+// @ts-ignore
+import pdfjsWorker from "pdfjs-dist/build/pdf.worker.entry";
+pdfjsLib.GlobalWorkerOptions.workerSrc = pdfjsWorker;
 const pdfViewerProps = {
   src: {
     type: String,
