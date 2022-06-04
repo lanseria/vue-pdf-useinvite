@@ -1,7 +1,7 @@
 <template>
   <div>
     <pdf-editor
-      src="https://bitcoinbook.info/wp-content/translations/cmn/book.pdf"
+      src="https://mozilla.github.io/pdf.js/web/compressed.tracemonkey-pldi-09.pdf"
     ></pdf-editor>
   </div>
 </template>

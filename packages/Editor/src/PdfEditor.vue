@@ -54,7 +54,6 @@ import {
 import { PDFDocument } from "pdf-lib";
 import Viewer, { PdfViewerRefs } from "../../Viewer/src/PdfViewer.vue";
 import { getBufferArray } from "../../utils/";
-import { TypedArray } from "pdfjs-dist/types/display/api";
 import Paint, { PaintRefs } from "./Paint.vue";
 import Text, { TextRefs } from "./Text.vue";
 import { NButton, NButtonGroup } from "naive-ui";

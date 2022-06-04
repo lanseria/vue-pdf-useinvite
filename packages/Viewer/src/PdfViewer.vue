@@ -51,13 +51,13 @@
           <canvas ref="CanvasRef"></canvas>
         </div>
         <div v-if="enabledPage" class="page-wrap">
-          <n-button type="text" @click="handlePrev()" :disabled="prevDisabled">
+          <n-button text @click="handlePrev()" :disabled="prevDisabled">
             <template #icon>
               <n-icon><caret-back-icon /></n-icon>
             </template>
           </n-button>
           <span>{{ current }} / {{ total }}</span>
-          <n-button type="text" @click="handleNext()" :disabled="nextDisabled">
+          <n-button text @click="handleNext()" :disabled="nextDisabled">
             <template #icon>
               <n-icon><caret-forward-icon /></n-icon>
             </template>
@@ -91,7 +91,7 @@ import {
   PropType,
 } from "vue";
 import * as pdfjsLib from "pdfjs-dist";
-import {
+import type {
   PDFDocumentProxy,
   PDFPageProxy,
   TypedArray,
@@ -205,7 +205,7 @@ const PdfViewer = defineComponent({
         viewportHeight: viewport.height,
       });
     };
-    const getPdfPage = async (crt: number) => {
+    const getPdfPage = async (crt = state.current) => {
       if (!state.pdfDoc) {
         return;
       }
